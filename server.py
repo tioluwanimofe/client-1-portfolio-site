@@ -15,8 +15,6 @@ def always_send_back(username=None):
 @app.route('/submit_form', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
-        data = request.form.to_dict()
-        print(data)
         return redirect("./success.html")
     else:
         return redirect('./error.html')
